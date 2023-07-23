@@ -1352,6 +1352,7 @@ section{
    background-color: var(--light-bg);
    width: 100%;
    margin: 1rem 0;
+   cursor:  url('../src/components/images/nodrop.svg'),auto;
 }
 .box{
    resize: none;

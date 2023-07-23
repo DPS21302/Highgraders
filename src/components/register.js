@@ -165,7 +165,8 @@ function Register() {
   <option value="U. V. Patel College of Engineering, Mehsana">U. V. Patel College of Engineering, Mehsana</option>
   <option value="Unitedworld School of Business, Ahmedabad">Unitedworld School of Business, Ahmedabad</option>
   <option value="Vishwakarma Government Engineering College, Gandhinagar">Vishwakarma Government Engineering College, Gandhinagar</option>
-
+  <option value="VPMP Polytechnic, Gandhinagar">VPMP Polytechnic, Gandhinagar</option>
+  <option value="VSITR Vidush Somany Institute of Technology and Research">VSITR Vidush Somany Institute of Technology and Research</option>
 </select>
 
       <p> &nbsp;&nbsp; Semester <span>*</span></p>
