@@ -1,13 +1,23 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import profilepic from './images/pic-1.jpg'
+
 import thumb from './images/Sem-1/FOP.png'
-import thumb1 from './images/Sem-1/FOP (2).png'
-import thumb2 from './images/Sem-1/Maths-1.png'
-import thumb3 from './images/Sem-1/EOC.png'
-import thumb4 from './images/Sem-1/EG.png'
-import thumb5 from './images/Sem-1/EP.png'
-import thumb6 from './images/Sem-1/ES.png'
+import s11 from './images/Sem-1/FOP.png'
+import s12 from './images/Sem-1/Maths-1.png'
+import s13 from './images/Sem-1/EOC.png'
+import s14 from './images/Sem-1/EG.png'
+import s15 from './images/Sem-1/EP.png'
+import s16 from './images/Sem-1/ES.png'
+
+import s21 from './images/Sem-2/OOPC.png'
+import s22 from './images/Sem-2/Maths-2.png'
+import s23 from './images/Sem-2/BEEE.png'
+import s24 from './images/Sem-2/FME.png'
+import s25 from './images/Sem-2/BCPS.png'
+import s26 from './images/Sem-2/WORKSHOP.png'
+import s27 from './images/Sem-2/IICT.png'
+
 
 import Header from "./header";
 import Sidebar from "./sidebar";
@@ -117,7 +127,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img src={thumb1} alt="/" />
+                  <img src={s11} alt="/" />
                   <span>7 Units</span>
                 </div>
                 <h3 className="title">Fundamental Of Programming</h3>
@@ -136,7 +146,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img src={thumb2} alt="" />
+                  <img src={s12} alt="" />
                   <span>7 Units</span>
                 </div>
                 <h3 className="title">Engineering Mathematics – 1</h3>
@@ -155,7 +165,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img src={thumb3} alt="" />
+                  <img src={s13} alt="" />
                   <span>10 Units</span>
                 </div>
                 <h3 className="title">Elements Of Civil Engineering</h3>
@@ -174,7 +184,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img src={thumb4} alt="" />
+                  <img src={s14} alt="" />
                   <span>12 Units</span>
                 </div>
                 <h3 className="title">Engineering Graphics</h3>
@@ -193,7 +203,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img src={thumb5} alt="" />
+                  <img src={s15} alt="" />
                   <span>10 Units</span>
                 </div>
                 <h3 className="title">Engineering Physics</h3>
@@ -212,7 +222,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img src={thumb6} alt="" />
+                  <img src={s16} alt="" />
                   <span>5 Units</span>
                 </div>
                 <h3 className="title">Enviromental Science</h3>
@@ -240,7 +250,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img src={thumb} alt="/" />
+                  <img src={s21} alt="/" />
                   <span>10 Units</span>
                 </div>
                 <h3 className="title">
@@ -261,7 +271,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img src={thumb} alt="" />
+                  <img src={s22} alt="" />
                   <span>7 Units</span>
                 </div>
                 <h3 className="title">Engineering Mathematics – 2</h3>
@@ -280,7 +290,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img src={thumb} alt="" />
+                  <img src={s23} alt="" />
                   <span>8 Units</span>
                 </div>
                 <h3 className="title">
@@ -301,7 +311,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img src={thumb} alt="" />
+                  <img src={s24} alt="" />
                   <span>15 Units</span>
                 </div>
                 <h3 className="title">Fundamental Of Mechanical Engineering</h3>
@@ -320,7 +330,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img src={thumb} alt="" />
+                  <img src={s25} alt="" />
                   <span>13 Units</span>
                 </div>
                 <h3 className="title">
@@ -341,7 +351,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img src={thumb} alt="" />
+                  <img src={s26} alt="" />
                   <span># Units</span>
                 </div>
                 <h3 className="title">Workshop [Only Labs]</h3>
@@ -360,7 +370,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img src={thumb} alt="" />
+                  <img src={s27} alt="" />
                   <span># Units</span>
                 </div>
                 <h3 className="title">

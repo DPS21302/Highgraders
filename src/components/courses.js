@@ -85,7 +85,6 @@ function Courses() {
    <h1 class="heading">our courses</h1>
 
    <div class="box-container">
-hiiiiiiiiiiiiiii
       <div class="box">
          <div class="tutor">
             <img src={profilepic} alt=""/>
