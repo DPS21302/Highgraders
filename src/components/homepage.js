@@ -18,6 +18,17 @@ import s25 from './images/Sem-2/BCPS.png'
 import s26 from './images/Sem-2/WORKSHOP.png'
 import s27 from './images/Sem-2/IICT.png'
 
+import s31 from './images/Sem-3/DSA.png'
+import s32 from './images/Sem-3/Maths-3.png'
+import s33 from './images/Sem-3/DBMS.png'
+import s34 from './images/Sem-3/DE.png'
+import s35 from './images/Sem-3/ITW.png'
+
+
+
+
+
+
 
 import Header from "./header";
 import Sidebar from "./sidebar";
@@ -400,7 +411,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img src={thumb} alt="/" />
+                  <img src={s31} alt="/" />
                   <span>6 Units</span>
                 </div>
                 <h3 className="title">Data Structures & Algorithms</h3>
@@ -419,7 +430,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img src={thumb} alt="" />
+                  <img src={s32} alt="" />
                   <span>5 Units</span>
                 </div>
                 <h3 className="title">Discrete Mathematics - 3</h3>
@@ -438,7 +449,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img src={thumb} alt="" />
+                  <img src={s33} alt="" />
                   <span>10 Units</span>
                 </div>
                 <h3 className="title">Database Management Systems</h3>
@@ -457,7 +468,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img src={thumb} alt="" />
+                  <img src={s34} alt="" />
                   <span>7 Units</span>
                 </div>
                 <h3 className="title">Digital Electronics</h3>
@@ -476,7 +487,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img src={thumb} alt="" />
+                  <img src={s35} alt="" />
                   <span>7 Units</span>
                 </div>
                 <h3 className="title">IT Workshop</h3>
