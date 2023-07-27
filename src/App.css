@@ -90,19 +90,19 @@ html::-webkit-scrollbar-thumb{
 
 body{
    background-color: var(--light-bg);
-   padding-left: 20rem;
-   margin: 0;
+   padding-left: 23rem;
+   /* margin: 0;
    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
      sans-serif;
    -webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
+   -moz-osx-font-smoothing: grayscale; */
 }
 
-code {
+/* code {
    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
      monospace;
- }
+ } */
 
 body.dark{
    --light-color:#aaa;
@@ -118,6 +118,10 @@ body.dark{
 body.active{
    padding-left: 0;
 }
+
+input[disabled] {
+   cursor: not-allowed;
+ }
 
 section{
    padding:2rem 4.1rem 2rem 4.1rem;
@@ -313,7 +317,7 @@ section{
 .side-bar{
    position: fixed;
    top: 0; left: 0;
-   width: 20rem;
+   width: 23rem;
    background-color: var(--white);
    height: 100vh;
    border-right: var(--border);
@@ -376,13 +380,15 @@ section{
 }
 
 .side-bar .navbar a i{
-   margin-right: 1.5rem;
+   margin-right: 2.5rem;
    color:var(--main-color);
    transition: .2s linear;
+   padding-left: 2rem;
 }
 
 .side-bar .navbar a span{
    color:var(--light-color);
+   letter-spacing: 0.1rem;
 }
 
 .side-bar .navbar a:hover{
@@ -399,7 +405,7 @@ section{
 
 .home-grid .box-container{
    display: grid;
-   grid-template-columns: repeat(auto-fit, 27.5rem);
+   /* grid-template-columns: repeat(auto-fit, 27.5rem); */
    gap:1.5rem;
    justify-content: center;
    align-items: flex-start;
@@ -467,6 +473,13 @@ section{
 
 .home-grid .box-container .likes span{
    color:var(--main-color);
+}
+
+.fa-question:before {
+   padding-right: 1.3rem;
+}
+.fa-headset:before {
+   padding-right: 0.5rem;
 }
 
 .about .row{
@@ -1320,11 +1333,20 @@ section{
    justify-content: center;
 }
 
+.form-container .image {
+   height: 10rem;
+   width: 10rem;
+   border-radius: 50%;
+   object-fit: contain;
+   margin-bottom: 1rem;
+}
+
 .form-container form{
    background-color: var(--white);
    border-radius: 4rem;
    padding: 2rem;
    width: 50rem;
+   flex-direction: column;
 }
 
 .form-container form h3{
@@ -1357,6 +1379,156 @@ section{
 .box{
    resize: none;
 }
+
+.update .form-container .form-row {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 1rem;
+ }
+ 
+ .update .form-container form .box.left-field {
+   width: 48%;
+ }
+ 
+ .update .form-container form .box.right-field {
+   width: 48%;
+ }
+ .form-container form .box[type="number"]::-webkit-inner-spin-button,
+.form-container form .box[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+ .update .form-container form {
+   background-color: var(--white);
+   border-radius: 4rem;
+   padding: 2rem;
+   width: 100rem;
+   flex-direction: column;
+   margin: 0 auto;
+ }
+ 
+ .update .form-container form .box {
+   border-bottom: 0.2rem solid var(--light-color);
+   padding: 1.4rem;
+   background-color: var(--light-bg);
+   width: 100%;
+   margin: 1rem 0;
+   position: relative;
+    /* Add this to create space for label outside the container */
+ }
+ 
+ .update .form-container form .box p {
+   position: absolute;
+   left: 1.6rem;
+   top: -1.5rem;
+   font-size: 1.2rem;
+   color: var(--black);
+   background-color: var(--white);
+   padding: 0 0.5rem;
+ }
+ 
+ .update .form-container form .box.left-field p {
+   top: -3rem;
+ }
+ 
+ .update .form-container form .box.right-field p {
+   top: -3rem;
+ }
+ 
+ .update textarea {
+   width: 100%;
+   height: 15rem;
+   border: none;
+   border-bottom: 0.2rem solid var(--light-color);
+   padding: 1.4rem;
+   background-color: var(--light-bg);
+   margin: 1rem 0;
+ }
+ 
+ .update .selected-skills-container {
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 1rem;
+ }
+ 
+ .update .selected-skill {
+   display: flex;
+   align-items: center;
+   background-color: var(--main-color);
+   border-radius: 0.4rem;
+   padding: 0.4rem 0.8rem;
+   margin: 0.4rem;
+ }
+ 
+ .update .selected-skill span {
+   margin-right: 0.8rem;
+ }
+ 
+ .update .selected-skill button {
+   background: none;
+   color: var(--leader);
+   border: none;
+   cursor: pointer;
+ }
+ 
+ .update .skills-dropdown {
+   position: relative;
+ }
+ 
+ .update .skills-options {
+   position: absolute;
+   top: 100%;
+   left: 0;
+   z-index: 1;
+   background-color: var(--main-color);
+   border: 0.1rem solid var(--main-color);
+   border-radius: 0.4rem;
+   max-height: 15rem;
+   overflow-y: auto;
+   box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+ }
+ 
+ .update .skill-option {
+   padding: 0.8rem 1.6rem;
+   cursor: pointer;
+ }
+ .viewprofile .image {
+   height: 10rem;
+   width: 10rem;
+   border-radius: 50%;
+   object-fit: contain;
+   margin-bottom: 1rem;
+ }
+ 
+ .viewprofile {
+   min-height: calc(100vh - 20rem);
+   margin-left: 20%;
+   max-width: 70rem;
+   background-color: var(--light-color);
+   color: var(--leader);
+   border-radius: 4rem;
+   padding: 2rem;
+   width: 100rem;
+   font-size: 1.5rem;
+   word-spacing: 0.4rem;
+ }
+ 
+ .viewprofile .field-container {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 1rem;
+   margin-bottom: 1.5rem;
+ }
+ 
+ .viewprofile .field-label {
+   font-weight: bold;
+ }
+ 
+ .viewprofile .field-value {
+   margin-top: 0.5rem;
+ }
+ 
 
 
 
@@ -1768,7 +1940,7 @@ section{
    }
 
    .side-bar{
-      left: -30rem;
+      left: -100rem;
       transition: .2s linear;
    }
 
@@ -1818,6 +1990,25 @@ section{
 }
 
 @media (max-width:450px){
+
+      .side-bar{
+      background-color: rgba(0, 0, 0, 0.7);
+      width:100%;
+   }
+   .side-bar.active {
+      .courses{
+         backdrop-filter: blur(50rem);
+      }
+      
+      /* Additional styles to make the glass effect take up the full screen */
+    
+      /* background-color: rgba(0,0,0,.7); */
+   }
+  
+   .side-bar .profile .image{
+      height: 10rem;
+      width: 10rem;
+   }
 
    html{
       font-size: 50%;
