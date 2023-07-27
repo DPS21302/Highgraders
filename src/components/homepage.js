@@ -24,6 +24,8 @@ import s33 from './images/Sem-3/DBMS.png'
 import s34 from './images/Sem-3/DE.png'
 import s35 from './images/Sem-3/ITW.png'
 
+import s41 from './images/Sem-4/OOPJ.png'
+
 
 
 
@@ -515,7 +517,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img src={thumb} alt="/" />
+                  <img src={s41} alt="/" />
                   <span>8 Units</span>
                 </div>
                 <h3 className="title">
