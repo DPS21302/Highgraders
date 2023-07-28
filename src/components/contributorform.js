@@ -6,7 +6,7 @@ import Header from "./header";
 import Sidebar from "./sidebar";
 import Footer from "./footer";
 
-function Contributor() {
+function ContributorForm() {
     useEffect(() => {
         let toggleBtn = document.getElementById("toggle-btn");
         let body = document.body;
@@ -82,7 +82,7 @@ function Contributor() {
 <section class="form-container">
 
    <form action="" method="post" enctype="multipart/form-data">
-      <h3>contribut now</h3>
+      <h3>contribute now</h3>
       {/* <p>Full Name <span>*</span></p>
       <input type="text" name="name"  placeholder="Enter your name" required maxlength="50" class="box"/>
 
@@ -92,7 +92,7 @@ function Contributor() {
       <p>College Name <span>*</span></p>
       <input type="text" name="College name" placeholder="Enter college name" required maxlength="50" class="box"/> */}
 
-      <p>Semester <span>*</span></p>
+      <p> &nbsp;&nbsp; Semester <span>*</span></p>
       <select name="sem" id="sem" class="box">
           <option value="1">1</option>
           <option value="2">2</option>
@@ -105,7 +105,7 @@ function Contributor() {
       </select >
       
 
-      <p>Subject Name <span>*</span></p>
+      <p> &nbsp;&nbsp; Subject Name <span>*</span></p>
       <input type="text" name="subject name" placeholder="Enter subject name" required maxlength="50" class="box"/>
       
 
@@ -116,11 +116,11 @@ function Contributor() {
       <input type="password" name="c_pass" placeholder="confirm your password" required maxlength="20" class="box"/>
       <p>select profile <span>*</span></p> */}
 
-      <p>Uplode File <span>*</span></p>
+      <p> &nbsp;&nbsp; Uplode File <span>*</span></p>
       {/* <input type="file" accept="image/*" required class="box"/> */}
       <input type="file" id="files" name="files" multiple required class="box"></input>
 
-      <p>Pdf Description <span>*</span></p>
+      <p> &nbsp;&nbsp; Pdf Description <span>*</span></p>
       {/* <textarea rows="#" cols="#" placeholder="Enter here..." class="box"></textarea> */}
       <textarea class="box" rows="6" placeholder="Send your comments to the author..."></textarea>
       {/* <i class="fa-solid fa-handshake-angle"></i> */}
@@ -141,4 +141,4 @@ function Contributor() {
   );
 }
 
-export default Contributor;
+export default ContributorForm;

@@ -44,11 +44,17 @@ const Sidebar = () => {
               <span>courses</span>
             </a>
           </Link>
-          <Link to="/teacher">
-          
+          <Link to="/contributors">
             <a>
               <i className="fas fa-chalkboard-user"></i>
               <span>contributors</span>
+            </a>
+            </Link>
+            <Link to="/Userlist">
+          
+            <a>
+              <i className="fas fa-users"></i>
+              <span>userlist</span>
             </a>
           </Link>
           <Link to="/contact">

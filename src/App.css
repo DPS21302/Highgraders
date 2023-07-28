@@ -49,12 +49,14 @@
    --orange:#f39c12;
    --light-color:#888;
    --light-bg:#eee;
+   --sidebar-hover:#eee;
    --light-dark: #eee;
    --black:#2c3e50;
    --even:#000000;
    --leader: #fff;
    --white:#fff;
-   --border:.1rem solid rgba(0,0,0,.2);
+   --profile-back:#888;
+   --border:.4rem solid rgba(0,0,0,.2);
 }
 
 *{
@@ -63,6 +65,7 @@
    box-sizing: border-box;
    outline: none; border:none;
    text-decoration: none;
+   
 }
 
 *::selection{
@@ -73,6 +76,7 @@
 html{
    font-size: 62.5%;
    overflow-x: hidden;
+   
 }
 
 html::-webkit-scrollbar{
@@ -90,7 +94,9 @@ html::-webkit-scrollbar-thumb{
 
 body{
    background-color: var(--light-bg);
-   padding-left: 23rem;
+   padding-left: 24rem;
+   
+   
    /* margin: 0;
    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -104,19 +110,22 @@ body{
      monospace;
  } */
 
+
 body.dark{
    --light-color:#aaa;
    --light-bg:#333;
    --leader: #222;
    --even:#ffffff;
-   
+   --sidebar-hover:#000000;
    --black:#fff;
-   --white:#222;
-   --border:.1rem solid rgba(255,255,255,.2);
+   --white:#000000;
+   --border:.4rem solid #202d1f;
+   --profile-back:#202d1f; 
 }
 
 body.active{
    padding-left: 0;
+
 }
 
 input[disabled] {
@@ -127,15 +136,17 @@ section{
    padding:2rem 4.1rem 2rem 4.1rem;
    margin: 0 auto;
    max-width: 1250px;
+   
 }
 
 .heading{
    font-size: 2.5rem;
    color:var(--black);
    margin-bottom: 2.5rem;
-   border-bottom: var(--border);
+   border-bottom: .4rem solid rgba(0,0,0,.2);
    padding-bottom: 1.5rem;
    text-transform: capitalize;
+   
 }
 
 .inline-btn,
@@ -206,6 +217,9 @@ section{
    background-color: var(--white);
    z-index: 1000;
    border-bottom: var(--border);
+   border-bottom-left-radius: 2rem;
+   border-bottom-right-radius: 2rem;
+   
 
 }
 
@@ -316,12 +330,15 @@ section{
 
 .side-bar{
    position: fixed;
-   top: 0; left: 0;
+   top: 8.1rem;
+   left:1rem;
    width: 23rem;
+   height:min-content;
    background-color: var(--white);
-   height: 100vh;
-   border-right: var(--border);
+   border: var(--border);
+   border-radius: 3rem;
    z-index: 1200;
+   box-shadow:6rem 10rem 190rem 1rem inset var(--profile-back);
 }
 
 .side-bar #close-btn{
@@ -356,7 +373,8 @@ section{
    height: 10rem;
    width: 10rem;
    border-radius: 50%;
-   object-fit: contain;
+   border:var(--border);
+   object-fit:contain;
    margin-bottom: 1rem;
 }
 
@@ -377,6 +395,7 @@ section{
    display: block;
    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
    font-size: 2rem;
+   
 }
 
 .side-bar .navbar a i{
@@ -391,8 +410,13 @@ section{
    letter-spacing: 0.1rem;
 }
 
+.side-bar .navbar a span:hover{
+   color:var(--main-color);
+}
+
 .side-bar .navbar a:hover{
-   background-color: var(--light-bg);
+
+   border-radius: 2.5rem;
 }
 
 .side-bar .navbar a:hover i{
@@ -1023,7 +1047,7 @@ section{
    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
-.teachers .search-tutor{
+.contributors .search-tutor{
    margin-bottom: 2rem;
    border-radius: .5rem;
    background-color: var(--white);
@@ -1033,25 +1057,25 @@ section{
    gap: 1.5rem;
 }
 
-.teachers .search-tutor input{
+.contributors .search-tutor input{
    width: 100%;
    background: none;
    font-size: 1.8rem;
    color: var(--black);
 }
 
-.teachers .search-tutor button{
+.contributors .search-tutor button{
    font-size: 2rem;
    color: var(--black);
    cursor: pointer;
    background:none;
 }
 
-.teachers .search-tutor button:hover{
+.contributors .search-tutor button:hover{
    color: var(--main-color);
 }
 
-.teachers .box-container{
+.contributors .box-container{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
    gap:1.5rem;
@@ -1059,7 +1083,7 @@ section{
    align-items: flex-start;
 }
 
-.teachers .box-container .box{
+.contributors .box-container .box{
    background-color: var(--white);
    border-radius: 5rem 5rem 0rem 0rem;
    box-shadow: 0px 5px 200px 12px inset #308025 ;
@@ -1067,13 +1091,13 @@ section{
    
 }
 
-.teachers .box-container .offer{
+.contributors .box-container .offer{
    width: 100%;
    height:fit-content;
    text-align: center;
 }
 
-.teachers .box-container .offer h3{
+.contributors .box-container .offer h3{
    font-size: 2.5rem;
    color: var(--black);
    text-transform: capitalize;
@@ -1081,7 +1105,7 @@ section{
    
 }
 
-.teachers .box-container .offer p{
+.contributors .box-container .offer p{
    line-height: 1.7;
    padding: .5rem 0;
    color: var(--light-color);
@@ -1091,41 +1115,41 @@ section{
  
 
 
-.teachers .box-container .box .tutor{
+.contributors .box-container .box .tutor{
    display: flex;
    align-items: center;
    gap:2rem;
    margin-bottom: 1.5rem;
 }
 
-.teachers .box-container .box .tutor img{
+.contributors .box-container .box .tutor img{
    height: 5rem;
    width: 5rem;
    border-radius: 50%;
 }
 
-.teachers .box-container .box .tutor h3{
+.contributors .box-container .box .tutor h3{
    font-size: 2rem;
    color: var(--black);
    margin-bottom: .2rem;
 }
 
-.teachers .box-container .box .tutor span{
+.contributors .box-container .box .tutor span{
    font-size: 1.6rem;
    color: var(--light-color);
 }
 
-.teachers .box-container .box p{
+.contributors .box-container .box p{
    padding: .5rem 0;
    font-size: 1.7rem;
    color: var(--light-color);
 }
 
-.teachers .box-container .box p span{
+.contributors .box-container .box p span{
    color: var(--main-color);
 }
 
-.teacher-profile .details{
+/* .teacher-profile .details{
    text-align: center;
    background-color: var(--white);
    border-radius: .5rem;
@@ -1168,7 +1192,7 @@ section{
 
 .teacher-profile .details .flex p span{
    color: var(--main-color);
-}
+} */
 
 .user-profile .info{
    background-color: var(--white);
@@ -1374,7 +1398,7 @@ section{
    background-color: var(--light-bg);
    width: 100%;
    margin: 1rem 0;
-   cursor:  url('../src/components/images/nodrop.svg'),auto;
+   /* cursor:  url('../src/components/images/nodrop.svg'),auto; */
 }
 .box{
    resize: none;
@@ -1545,6 +1569,8 @@ section{
    color:var(--black);
    margin-top: 11rem;
    z-index: 1000;
+   border-top-left-radius: 2rem;
+   border-top-right-radius: 2rem;
    /* padding-bottom: 9.5rem; */
 }
 
@@ -1992,13 +2018,24 @@ section{
 @media (max-width:450px){
 
       .side-bar{
-      background-color: rgba(0, 0, 0, 0.7);
-      width:100%;
+         /* backdrop-filter: blur(80px); */
+         /* -webkit-backdrop•filter: blur(80px); */
+
+
+
    }
    .side-bar.active {
       .courses{
-         backdrop-filter: blur(50rem);
+         position: fixed;
+         top: 8.1rem;
+         left:1rem;
+         width: 23rem;
+         height:min-content;
+         z-index: 1200;
+         /* backdrop-filter: blur(1rem); */
       }
+      
+
       
       /* Additional styles to make the glass effect take up the full screen */
     
@@ -2006,8 +2043,8 @@ section{
    }
   
    .side-bar .profile .image{
-      height: 10rem;
-      width: 10rem;
+      height: 20rem;
+      width: 20rem;
    }
 
    html{
@@ -2029,3 +2066,204 @@ section{
 
 }
 
+::marker {
+   color: var(--light-bg);
+}
+
+/* =================================================USERLIST======================================================================================== */
+
+.accordion {
+   height: 60px;
+     background-color:skyblue;
+     color: white;
+     cursor: pointer;
+     margin-top: -5px;
+     padding: 18px;
+     margin-left: 350px;
+     width: 50%;
+     border: none;
+     text-align: left;
+     outline: none;
+     font-size: 20px;
+     font-weight: bold;
+     transition: 0.4s;
+   }
+   .accordion2 {
+   height: 60px;
+     background-color:white;
+     color: white;
+     cursor: pointer;
+     padding: 18px;
+     margin-left: 350px;
+     width: 50%;
+     border: none;
+     text-align: left;
+     outline: none;
+     font-size: 20px;
+     font-weight: bold;
+     transition: 0.4s;
+   }
+     .active, .accordion:hover {
+         background-color: skyblue;
+         color: black; 
+   }
+       .panel {
+     padding: 0 18px;
+     display: none;
+     width: 50%;
+     margin-left: 350px;
+     /* background-color: white; */
+     overflow: hidden;
+     color: white;
+   }
+   .faq-page:after {
+       content: '\02795';
+       /* Unicode character for "plus" sign (+) */
+       font-size: 13px;
+       color: black;
+       float: right;
+       margin-left: 5px;
+       margin-top: -30px
+   }
+   .active:after {
+       content: "\02796";
+       font-size: 13px;
+       color: black;
+       float: right;
+       margin-left: 5px;
+   }
+   
+   p{
+       font-weight: 400;
+       font-size: large;
+       font-family: serif;
+       letter-spacing: 1px;
+       word-spacing: 3px;
+       
+   }
+   div>p{
+       color: black;
+   }
+   .hr-line{
+     width: 50%;
+     margin-left: 350px;
+    
+   }
+   button{
+       padding: 5px;
+       background-color: black;
+       color: white;
+       border: black;
+       cursor: pointer;
+       border-radius: 5px;
+       background-color: darkblue;
+   }
+   #mybtn{
+       color: white;
+       background-color: darkblue;
+   }
+   h2{
+       color: black;
+       font-weight: bold;
+       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       font-size:xx-large;
+       text-align: center;
+   }
+   .modal {
+     display: none; /* Hidden by default */
+     position: fixed; /* Stay in place */
+     z-index: 1; /* Sit on top */
+     padding-top: 100px; /* Location of the box */
+     left: 0;
+     top: 0;
+     width: 100%; /* Full width */
+     height: 100%; /* Full height */
+     overflow: auto; /* Enable scroll if needed */
+     background-color: rgb(0,0,0); /* Fallback color */
+     color: white;
+     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+   }
+   
+   /* Modal Content */
+   .modal-content {
+     background-color: #fefefe;
+     margin: auto;
+     padding: 20px;
+     border: 1px solid black;
+     width: 30%;
+     height: 500px;
+   }
+   
+   /* The Close Button */
+   .close {
+     color: black;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+   }
+   
+   .close:hover,
+   .close:focus {
+     color: white;
+     text-decoration: none;
+     cursor: pointer;
+   }
+   .dropbtn {
+background-color: white;
+color: black;
+padding: 10px;
+font-size: 20px;
+border: black;
+cursor: pointer;
+
+}
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+   background-color:darkblue;
+   transition: .3s linear;
+   box-shadow: 2px 2px 10px rgb(86, 206, 104);
+   overflow: hidden;
+   
+ }
+ 
+ 
+ 
+ /* The container <div> - needed to position the dropdown content */
+ .dropdown {
+   position: relative;
+   display: inline-block;
+   background-color: white;
+   color: black;
+ }
+ 
+ /* Dropdown Content (Hidden by Default) */
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color:white;
+   min-width: 180px;
+   border: 1px solid black;
+   z-index: 1;
+ }
+ 
+ /* Links inside the dropdown */
+ .dropdown-content a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+   font-weight: 100;
+   font-size: 15px;
+   
+ }
+ 
+ /* Change color of dropdown links on hover */
+ .dropdown-content a:hover {background-color:rgb(84, 229, 48); }
+ 
+ /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+ .show {display:block;}
+ textarea{
+   width: 100%;
+   height: 100px;
+   color: black;
+ }

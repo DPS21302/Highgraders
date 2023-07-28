@@ -98,6 +98,7 @@ function Register() {
   <option value="A. D. Patel Institute of Technology, Vallabh Vidyanagar">A. D. Patel Institute of Technology, Vallabh Vidyanagar</option>
   <option value="Adani Institute of Infrastructure Management, Ahmedabad">Adani Institute of Infrastructure Management, Ahmedabad</option>
   <option value="Ahmedabad University">Ahmedabad University</option>
+  <option value="Apollo Institute Of Engineering and Technology, Ahmedabad">Apollo Institute Of Engineering and Technology, Ahmedabad</option>
   <option value="Birla Vishwakarma Mahavidyalaya">Birla Vishwakarma Mahavidyalaya</option>
   <option value="Birla Vishwakarma Mahavidyalaya, Anand">Birla Vishwakarma Mahavidyalaya, Anand</option>
   <option value="C K Pithawala College of Engineering and Technology, Surat">C K Pithawala College of Engineering and Technology, Surat</option>
@@ -110,6 +111,7 @@ function Register() {
   <option value="Dharamsinh Desai University">Dharamsinh Desai University</option>
   <option value="Dr. Jivraj Mehta Institute of Technology, Anand">Dr. Jivraj Mehta Institute of Technology, Anand</option>
   <option value="G H Patel College Of Engineering & Technology, Vallabh Vidyanagar">G H Patel College Of Engineering & Technology, Vallabh Vidyanagar</option>
+  <option value="Gandhinagar Institute Of Technology,GIT">Gandhinagar Institute Of Technology,GIT</option>
   <option value="Gandhinagar University">Gandhinagar University</option>
   <option value="Ganpat University">Ganpat University</option>
   <option value="GLS University">GLS University</option>
@@ -161,6 +163,7 @@ function Register() {
   <option value="Silver Oak University">Silver Oak University</option>
   <option value="St. Kabir Institute of Professional Studies, Ahmedabad">St. Kabir Institute of Professional Studies, Ahmedabad</option>
   <option value="St. Xavier's College, Ahmedabad">St. Xavier's College, Ahmedabad</option>
+  <option value="Swaminarayan College Of Engineering & Technology">Swaminarayan College Of Engineering & Technology</option>
   <option value="Times Business School, Bodakdev, Ahmedabad">Times Business School, Bodakdev, Ahmedabad</option>
   <option value="U. V. Patel College of Engineering, Mehsana">U. V. Patel College of Engineering, Mehsana</option>
   <option value="Unitedworld School of Business, Ahmedabad">Unitedworld School of Business, Ahmedabad</option>

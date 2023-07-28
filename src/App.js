@@ -11,9 +11,10 @@ import Courses from "./components/courses";
 import About from "./components/about";
 import Contact from "./components/contact";
 import Playlist from "./components/playlist";
-import TeacherProfile from "./components/teacher_profile";
-import Teacher from "./components/teacher";
-import Contributor from "./components/contributor";
+// import TeacherProfile from "./components/teacher_profile";
+import Userlist from "./components/Userlist";
+import Contributors from "./components/Contributors";
+import ContributorForm from "./components/contributorform";
 import OTP from "./components/OTP";
 import ResetPassword from "./components/ResetPassword";
 import ForgotPassword from "./components/ForgotPassword";
@@ -59,9 +60,10 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/playlist" element={<Playlist />} />
-        <Route path="/teacherProfile" element={<TeacherProfile />} />
-        <Route path="/teacher" element={<Teacher/>} />
-        <Route path="/contributor" element={<Contributor/>} />
+        {/* <Route path="/teacherProfile" element={<TeacherProfile />} /> */}
+        <Route path="/contributors" element={<Contributors/>} />
+        <Route path="/userlist" element={<Userlist/>} />
+        <Route path="/contributorform" element={<ContributorForm/>} />
         <Route path="/courses" element={<Courses/>} />
         <Route path="/watchvideo" element={<WatchVideo/>} />
         <Route path="/resetpassword" element={<ResetPassword/>} />

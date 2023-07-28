@@ -83,14 +83,14 @@ function Login() {
 
    <form action="" method="post" enctype="multipart/form-data">
       <h3>Login Now</h3>
-      <p>Your Email <span>*</span></p>
+      <p> &nbsp;&nbsp; Your Email <span>*</span></p>
       <input type="email" name="email" placeholder="Enter your email" required maxlength="50" class="box"/>
-      <p>Your Password <span>*</span></p>
+      <p> &nbsp;&nbsp; Your Password <span>*</span></p>
       <input type="password" name="pass" placeholder="Enter your password" required maxlength="20" class="box"/>
-      <Link to='/forgotpassword'> <p>Forgot Password?</p> </Link> 
+      <Link to='/forgotpassword'> <p> &nbsp;&nbsp; Forgot Password?</p> </Link> 
       {/* <input type="submit" value="login new" name="submit" class="btn"/> */}
       <Link to='/'> <a  class="btn">login new</a> </Link>
-      <p>Don't have an account? </p>
+      <p> &nbsp;&nbsp; Don't have an account? </p>
       <Link to='/register'> <a  class="btn">Register</a> </Link> 
    </form>
 
