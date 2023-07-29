@@ -2017,13 +2017,13 @@ section{
 
 @media (max-width:450px){
 
-      .side-bar{
-         /* backdrop-filter: blur(80px); */
-         /* -webkit-backdrop•filter: blur(80px); */
+      /* .side-bar{
+          backdrop-filter: blur(80px); 
+          -webkit-backdrop•filter: blur(80px); 
 
 
 
-   }
+   } */
    .side-bar.active {
       .courses{
          position: fixed;
