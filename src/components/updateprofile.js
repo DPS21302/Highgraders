@@ -50,104 +50,104 @@ function UpdateProfile() {
     <>
       <Header />
       <Sidebar />
-      <div className="update">
-        <section className="form-container">
+      <div class="update">
+        <section class="form-container">
           <form action="" method="post" encType="multipart/form-data">
             <h3>Update Profile</h3>
-            <div className="profile">
-              <img src={profilepic} className="image" alt="" />
+            <div class="profile">
+              <img src={profilepic} class="image" alt="" />
               <div>
-                <div className="form-row">
-                  <div className="box left-field">
+                <div class="form-row">
+                  <div class="box left-field">
                     <p>Update Name</p>
-                    <input type="text" name="name" placeholder="Name" maxLength="50" className="box" />
+                    <input type="text" name="name" placeholder="Name" maxLength="50" class="box" />
                   </div>
-                  <div className="box right-field">
+                  <div class="box right-field">
                     <p>Update Email</p>
                     <input
                       type="email"
                       name="email"
                       placeholder="example@gmail.com"
                       maxLength="50"
-                      className="box"
+                      class="box"
                       disabled
                     />
                   </div>
                 </div>
-                <div className="form-row">
-                  <div className="box left-field">
+                <div class="form-row">
+                  <div class="box left-field">
                     <p>Update College</p>
                     <input
                       type="text"
                       name="college"
                       placeholder="Enter your college name"
                       maxLength="20"
-                      className="box"
+                      class="box"
                     />
                   </div>
-                  <div className="box right-field">
+                  <div class="box right-field">
                     <p>Update Semester</p>
-                    <input type="number" name="semester" value={semester} onChange={handleSemesterChange} className="box" />
+                    <input type="number" name="semester" value={semester} onChange={handleSemesterChange} class="box" />
                   </div>
                 </div>
-                <div className="form-row">
-                  <div className="box left-field">
+                <div class="form-row">
+                  <div class="box left-field">
                     <p>Gender</p>
-                    <select id="dropdown" name="gender" className="box">
+                    <select id="dropdown" name="gender" class="box">
                       <option value=" ">Gender</option>
                       <option value="Male">Male</option>
                       <option value="Female">Female</option>
                       <option value="Prefernottosay">Prefer Not To Say</option>
                     </select>
                   </div>
-                  <div className="box right-field">
+                  <div class="box right-field">
                     <p>Birthdate</p>
-                    <input type="date" name="birthdate" className="box" />
+                    <input type="date" name="birthdate" class="box" />
                   </div>
                 </div>
-                <div className="form-row">
-                  <div className="box left-field">
+                <div class="form-row">
+                  <div class="box left-field">
                     <p>LinkedIn URL:</p>
-                    <input type="url" name="LinkedIn url" placeholder="Enter your LinkedIn URL" className="box" />
+                    <input type="url" name="LinkedIn url" placeholder="Enter your LinkedIn URL" class="box" />
                   </div>
-                  <div className="box right-field">
+                  <div class="box right-field">
                     <p>Github URL:</p>
-                    <input type="url" name="Github url" placeholder="Enter your Github URL" maxLength="20" className="box" />
+                    <input type="url" name="Github url" placeholder="Enter your Github URL" maxLength="20" class="box" />
                   </div>
                 </div>
-                <div className="form-row">
-                  <div className="box left-field">
+                <div class="form-row">
+                  <div class="box left-field">
                     <p>Portfolio or Resume link:</p>
-                    <input type="url" name="Profile url" placeholder="Enter Resume Link" className="box" />
+                    <input type="url" name="Profile url" placeholder="Enter Resume Link" class="box" />
                   </div>
-                  <div className="box right-field">
+                  <div class="box right-field">
                     <p>Coding Profile or Leetcode URL:</p>
-                    <input type="url" name="Coding url" placeholder="Enter Coding url" maxLength="20" className="box" />
+                    <input type="url" name="Coding url" placeholder="Enter Coding url" maxLength="20" class="box" />
                   </div>
                 </div>
                 <p>About Me</p>
-                <textarea name="aboutMe" placeholder="Write something about yourself..." className="box" />
+                <textarea name="aboutMe" placeholder="Write something about yourself..." class="box" />
 
-                <div className="form-row">
-                  <div className="box left-field">
+                <div class="form-row">
+                  <div class="box left-field">
                     <p>Skills</p>
 
-                    <div className="skills-dropdown">
-                      <div className="selected-skill-dropdown" onClick={() => setShowSkillsDropdown(!showSkillsDropdown)}>
-                        Select Skills <i className={`arrow ${showSkillsDropdown ? "up" : "down"}`} />
+                    <div class="skills-dropdown">
+                      <div class="selected-skill-dropdown" onClick={() => setShowSkillsDropdown(!showSkillsDropdown)}>
+                        Select Skills <i class={`arrow ${showSkillsDropdown ? "up" : "down"}`} />
                       </div>
                       {showSkillsDropdown && (
-                        <div className="skills-options">
+                        <div class="skills-options">
                           {availableSkills.map((skill) => (
-                            <div key={skill} className="skill-option" onClick={() => handleSkillSelect(skill)}>
+                            <div key={skill} class="skill-option" onClick={() => handleSkillSelect(skill)}>
                               {skill}
                             </div>
                           ))}
                         </div>
                       )}
-                      <div className="selected-skills-container">
+                      <div class="selected-skills-container">
                         {selectedSkills.map((skill) => (
-                          <div key={skill} className="selected-skill">
+                          <div key={skill} class="selected-skill">
                             <span>{skill}</span>
                             <button onClick={() => handleSkillRemove(skill)}>X</button>
                           </div>
@@ -155,31 +155,31 @@ function UpdateProfile() {
                       </div>
                     </div>
                   </div>
-                  <div className="box right-field">
+                  <div class="box right-field">
                     <p>CPI</p>
-                    <input type="number" name="cpi" value={cpi} step={0.01} onChange={handleCpiChange} className="box" />
+                    <input type="number" name="cpi" value={cpi} step={0.01} onChange={handleCpiChange} class="box" />
                   </div>
                 </div>
-                <div className="form-row">
-                  <div className="box left-field">
+                <div class="form-row">
+                  <div class="box left-field">
                     <p>Hobbies</p>
                     <input
                       type="text"
                       name="hobbies"
                       placeholder="Enter your hobbies separated by commas"
-                      className="box"
+                      class="box"
                       value={hobbies.join(", ")}
                       onChange={handleHobbiesChange}
                     />
                   </div>
-                  <div className="box right-field">
+                  <div class="box right-field">
                     <p>Goals/Interests</p>
                     <textarea
                       name="goals"
                       placeholder="Enter your goals/interests..."
                       value={goals}
                       onChange={handleGoalsChange}
-                      className="box"
+                      class="box"
                     />
                   </div>
                 </div>
@@ -187,7 +187,7 @@ function UpdateProfile() {
                 {/* Remove the "Update Pic" option */}
                 {/* Your existing form elements ... */}
 
-                <input type="submit" value="update profile" name="submit" className="btn" />
+                <input type="submit" value="update profile" name="submit" class="btn" />
               </div>
             </div>
           </form>

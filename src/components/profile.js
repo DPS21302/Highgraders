@@ -89,7 +89,7 @@ function Profile() {
          <img src={profilepic} alt=""/>
          <h3>Darshit Sojitra</h3>
          <p>student</p>
-     <Link to='updateProfile' >  <a href="update.html" class="inline-btn">update profile</a> </Link> 
+     <Link to='/updateProfile' >  <a href="update.html" class="inline-btn">update profile</a> </Link> 
       </div>
    
       <div class="box-container">

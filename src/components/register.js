@@ -190,7 +190,13 @@ function Register() {
       <option value="Female">Female</option>
       <option value="LGBTQIA2S+">LGBTQIA2S+</option>
       </select>
+
       <p>&nbsp;&nbsp; Select Profile </p>
+      <img
+    // src={profileImage ? URL.createObjectURL(profileImage) : profilepic}
+    alt="Profile"
+    className="profile-pic-preview"
+  />
       <input type="file" accept="image/*"  class="box"/>
       <Link to='/otp'> <a  class="btn">Register New</a> </Link>
       <p>&nbsp;&nbsp; Already have an account? </p>
