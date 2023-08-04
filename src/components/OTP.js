@@ -87,7 +87,7 @@ function OTP() {
 
 
       {/* <input type="text" name="OTP" placeholder="" required   class="box"/> */}
-      <input type="numeric" name="OTP" pattern="^[0-9\s]{6}$" min="0" max="9" maxlength="6"   required class="box"/>
+      <input type="Numeric" name="OTP" pattern="^[0-9\s]{6}$" min="0" max="9" maxlength="6"   required class="box"/>
 
 
       {/* <input type="submit" value="Submit" name="submit" class="btn"/> */}

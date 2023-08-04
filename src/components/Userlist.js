@@ -42,21 +42,194 @@ const Demo = () => {
       });
     });
   }, []);
+  useEffect(() => {
+    const greeting = ["MERN Developer", "Full-Stack Developer ", "Computer Engineer", "Java Developer"];
+    let currentGreetingIndex = 0;
+    let currentCharacterIndex = 0;
+    let isDeleting = false;
+    let isPaused = false;
+    let pauseEnd = 0;
+
+    function typeWriterEffect() {
+      const greetingElement = document.getElementById("typing");
+
+      if (isPaused && Date.now() > pauseEnd) {
+        isPaused = false;
+        if (isDeleting) {
+          currentGreetingIndex = (currentGreetingIndex + 1) % greeting.length;
+          isDeleting = false;
+        } else {
+          isDeleting = true;
+        }
+      }
+
+      if (
+        !isPaused &&
+        !isDeleting &&
+        currentCharacterIndex === greeting[currentGreetingIndex].length
+      ) {
+        isPaused = true;
+        pauseEnd = Date.now() + 800;
+        return setTimeout(typeWriterEffect, 50);
+      }
+
+      if (!isPaused && isDeleting && currentCharacterIndex === 0) {
+        isPaused = true;
+        pauseEnd = Date.now() + 200;
+        return setTimeout(typeWriterEffect, 50);
+      }
+
+      const timeout = isDeleting ? 100 : 200;
+      greetingElement.innerText = greeting[currentGreetingIndex].substring(
+        0,
+        currentCharacterIndex
+      );
+      currentCharacterIndex = isDeleting
+        ? currentCharacterIndex - 1
+        : currentCharacterIndex + 1;
+      setTimeout(typeWriterEffect, timeout);
+    }
+
+    // Start the typing effect
+    typeWriterEffect();
+  }, []);
   return (
     <>
       <Header />
       <Sidebar />
 
-      <h1 id="head">ALL TRUSTED USER LIST</h1>
+      <h1 className="user-list" id="head">ALL TRUSTED USER LIST</h1>
 
       <div className="accordion">
         <div className="accordion-item">
           <div className="accordion-item-header">
+            <img src="https://res.cloudinary.com/dkyrtfk1u/image/upload/v1690369698/i14t3seuzumapysauajm.jpg" alt="Profile" className="profile-pic-list" />
+            Mayank Yadav
+          </div>
+          <div className="accordion-item-body">
+            <div class="accordion-item-body-content box1 .box-user-list">
+              <div class="content">
+                <div class="image">
+                  <img
+                    src="https://res.cloudinary.com/dkyrtfk1u/image/upload/v1690369698/i14t3seuzumapysauajm.jpg"
+                    alt="Profile Image"
+                    className="image-user-list"
+                  />
+                </div>
+                <div class="level">
+                  <p>PRO</p>
+                </div>
+                <div class="text">
+                  <p class="name">Mayank Yadav</p>
+                  <p class="typing" id="typing"></p>
+                  <p class="job_discription">
+                  An enthusiastic programmer, who is always willing to learn and enhance both technical and personal skills in all possible ways for mutual benefits.
+                  </p>
+                </div>
+                <div class="icons">
+                  <button>
+                    <ion-icon name="logo-dribbble"></ion-icon>
+                  </button>
+                  <button>
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </button>
+                  <button>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </button>
+                  <button>
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </button>
+                  <button>
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </button>
+                  <button>
+                    <ion-icon name="logo-behance"></ion-icon>
+                  </button>
+                </div>
+                <div class="button">
+                  <div>
+                    <button class="message" type="button">
+                      Message
+                    </button>
+                  </div>
+                  <div>
+                    <button class="connect" type="button">
+                      Connect
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="accordion-item">
+          <div className="accordion-item-header">
             <img src={profilepic} alt="Profile" className="profile-pic-list" />
-            &nbsp;Darshit Sojitra
+            Darshit Sojitra
           </div>
           <div className="accordion-item-body">
             <div class="accordion-item-body-content box1 box">
+              <div class="content">
+                <div class="image">
+                  <img 
+                    src="https://i.postimg.cc/bryMmCQB/profile-image.jpg"
+                    alt="Profile Image"
+                  />
+                </div>
+                <div class="level">
+                  <p>PRO</p>
+                </div>
+                <div class="text">
+                  <p class="name">Ethan Rivers</p>
+                  <p class="job_title">UI / UX Designer</p>
+                  <p class="job_discription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Magnam atque, ipsam a amet laboriosam eligendi.
+                  </p>
+                </div>
+                <div class="icons">
+                  <button>
+                    <ion-icon name="logo-dribbble"></ion-icon>
+                  </button>
+                  <button>
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </button>
+                  <button>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </button>
+                  <button>
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </button>
+                  <button>
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </button>
+                  <button>
+                    <ion-icon name="logo-behance"></ion-icon>
+                  </button>
+                </div>
+                <div class="button">
+                  <div>
+                    <button class="message" type="button">
+                      Message
+                    </button>
+                  </div>
+                  <div>
+                    <button class="connect" type="button">
+                      Connect
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="accordion-item">
+          <div className="accordion-item-header">
+            <img src={profilepic} alt="Profile" className="profile-pic-list" />
+            Darshit Sojitra
+          </div>
+          <div className="accordion-item-body">
+            <div class="accordion-item-body-content box1 .box-user-list">
               <div class="content">
                 <div class="image">
                   <img
@@ -114,193 +287,10 @@ const Demo = () => {
         <div className="accordion-item">
           <div className="accordion-item-header">
             <img src={profilepic} alt="Profile" className="profile-pic-list" />
-            &nbsp;Mayank Yadav
+            Darshit Sojitra
           </div>
           <div className="accordion-item-body">
-            <div class="accordion-item-body-content box1 box">
-              <div class="content">
-                <div class="image">
-                  <img
-                    src="https://i.postimg.cc/bryMmCQB/profile-image.jpg"
-                    alt="Profile Image"
-                  />
-                </div>
-                <div class="level">
-                  <p>PRO</p>
-                </div>
-                <div class="text">
-                  <p class="name">Ethan Rivers</p>
-                  <p class="job_title">UI / UX Designer</p>
-                  <p class="job_discription">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Magnam atque, ipsam a amet laboriosam eligendi.
-                  </p>
-                </div>
-                <div class="icons">
-                  <button>
-                    <ion-icon name="logo-dribbble"></ion-icon>
-                  </button>
-                  <button>
-                    <ion-icon name="logo-instagram"></ion-icon>
-                  </button>
-                  <button>
-                    <ion-icon name="logo-twitter"></ion-icon>
-                  </button>
-                  <button>
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                  </button>
-                  <button>
-                    <ion-icon name="logo-facebook"></ion-icon>
-                  </button>
-                  <button>
-                    <ion-icon name="logo-behance"></ion-icon>
-                  </button>
-                </div>
-                <div class="button">
-                  <div>
-                    <button class="message" type="button">
-                      Message
-                    </button>
-                  </div>
-                  <div>
-                    <button class="connect" type="button">
-                      Connect
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="accordion-item">
-          <div className="accordion-item-header">
-            <img src={profilepic} alt="Profile" className="profile-pic-list" />
-            &nbsp;Divya KauRANI
-          </div>
-          <div className="accordion-item-body">
-            <div class="accordion-item-body-content box1 box">
-              <div class="content">
-                <div class="image">
-                  <img
-                    src="https://i.postimg.cc/bryMmCQB/profile-image.jpg"
-                    alt="Profile Image"
-                  />
-                </div>
-                <div class="level">
-                  <p>PRO</p>
-                </div>
-                <div class="text">
-                  <p class="name">Ethan Rivers</p>
-                  <p class="job_title">UI / UX Designer</p>
-                  <p class="job_discription">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Magnam atque, ipsam a amet laboriosam eligendi.
-                  </p>
-                </div>
-                <div class="icons">
-                  <button>
-                    <ion-icon name="logo-dribbble"></ion-icon>
-                  </button>
-                  <button>
-                    <ion-icon name="logo-instagram"></ion-icon>
-                  </button>
-                  <button>
-                    <ion-icon name="logo-twitter"></ion-icon>
-                  </button>
-                  <button>
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                  </button>
-                  <button>
-                    <ion-icon name="logo-facebook"></ion-icon>
-                  </button>
-                  <button>
-                    <ion-icon name="logo-behance"></ion-icon>
-                  </button>
-                </div>
-                <div class="button">
-                  <div>
-                    <button class="message" type="button">
-                      Message
-                    </button>
-                  </div>
-                  <div>
-                    <button class="connect" type="button">
-                      Connect
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="accordion-item">
-          <div className="accordion-item-header">
-            <img src={profilepic} alt="Profile" className="profile-pic-list" />
-            &nbsp;Gaurav Tiwari
-          </div>
-          <div className="accordion-item-body">
-            <div class="accordion-item-body-content box1 box">
-              <div class="content">
-                <div class="image">
-                  <img
-                    src="https://i.postimg.cc/bryMmCQB/profile-image.jpg"
-                    alt="Profile Image"
-                  />
-                </div>
-                <div class="level">
-                  <p>PRO</p>
-                </div>
-                <div class="text">
-                  <p class="name">Ethan Rivers</p>
-                  <p class="job_title">UI / UX Designer</p>
-                  <p class="job_discription">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Magnam atque, ipsam a amet laboriosam eligendi.
-                  </p>
-                </div>
-                <div class="icons">
-                  <button>
-                    <ion-icon name="logo-dribbble"></ion-icon>
-                  </button>
-                  <button>
-                    <ion-icon name="logo-instagram"></ion-icon>
-                  </button>
-                  <button>
-                    <ion-icon name="logo-twitter"></ion-icon>
-                  </button>
-                  <button>
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                  </button>
-                  <button>
-                    <ion-icon name="logo-facebook"></ion-icon>
-                  </button>
-                  <button>
-                    <ion-icon name="logo-behance"></ion-icon>
-                  </button>
-                </div>
-                <div class="button">
-                  <div>
-                    <button class="message" type="button">
-                      Message
-                    </button>
-                  </div>
-                  <div>
-                    <button class="connect" type="button">
-                      Connect
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="accordion-item">
-          <div className="accordion-item-header">
-            <img src={profilepic} alt="Profile" className="profile-pic-list" />
-            &nbsp;MIT Patel
-          </div>
-          <div className="accordion-item-body">
-            <div class="accordion-item-body-content box1 box">
+            <div class="accordion-item-body-content box1 .box-user-list">
               <div class="content">
                 <div class="image">
                   <img
