@@ -742,9 +742,7 @@ const Home = () => {
 
 <Sidebar />
 
-<section className="home-grid">
-  <TextSphere />
-</section>
+
 
       <section className="courses">
         <ul id="tabs">
