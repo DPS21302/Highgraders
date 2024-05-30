@@ -35,7 +35,6 @@ import s41 from './images/Sem-4/OOPJ.png'
 import Header from "./header";
 import Sidebar from "./sidebar";
 import Footer from "./footer";
-import TextSphere from "./textsphere";
 import $ from "jquery";
 
 
